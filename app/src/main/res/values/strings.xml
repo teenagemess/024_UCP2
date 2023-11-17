@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Exercise2</string>
+    <string name="back_button">Kembali</string>
+    <string name="confirm">Konfirmasi</string>
+    <string name="next">Lanjut</string>
+    <string name="cancel">Batal</string>
+    <string name="haris">Haris Setiawan</string>
+    <string name="damar">Cahya Damar Jati</string>
+    <string name="aprilia">Aprilia Kurnianti</string>
+    <string name="dwijoko">Dwijoko</string>
+    <string name="Tony">Tony K</string>
+    <string name="asroni">Asroni</string>
+    <string name="send">Send Order to Another App</string>
+    <string name="quantity">Jumlah</string>
+    <string name="flavor">Album</string>
+    <string name="subtotal_price">Subtotal : Rp %s</string>
+    <string name="total_price">Total %s</string>
+    <string name="nama">Nama</string>
+    <string name="nohp">Telepon</string>
+    <string name="alamat">Alamat</string>
+    <string name="btn_submit">Submit</string>
+</resources>
