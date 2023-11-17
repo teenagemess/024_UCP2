@@ -44,15 +44,26 @@ fun FormulirMahasiswa(
             }
             composable(route = PengelolaHalaman.Form.name) {
                 HalamanSatu(
-                    onSubmitButtonClicked = { nama, nim, konsentrasi ->
-                        viewModel.setDataMhs(nama, nim, konsentrasi)
-                        navController.navigate(PengelolaHalaman.Home.name)
+                    onSubmitButtonClicked = { nama, nim, konsentrasi, judulskripsi ->
+                        viewModel.setDataMhs(nama, nim, konsentrasi, judulskripsi)
+                        navController.navigate(PengelolaHalaman.Hasil.name)
                     },
                     onCancelButtonClicked = {
                         navController.navigate(PengelolaHalaman.Home.name)
                     },
                 )
             }
+            composable(route = PengelolaHalaman.Hasil.name) {
+                HalamanHasil(
+                    DataUIState = uiState,
+                    onCancelButtonClicked = { cancelOrderAndNavigateToRasa(navController) })
+            }
         }
     }
+}
+
+private fun cancelOrderAndNavigateToRasa(
+    navController: NavHostController
+) {
+    navController.popBackStack(PengelolaHalaman.Home.name, inclusive = false)
 }

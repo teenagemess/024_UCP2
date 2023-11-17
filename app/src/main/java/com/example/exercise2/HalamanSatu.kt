@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HalamanSatu(
-    onSubmitButtonClicked: (String, String, String) -> Unit,
+    onSubmitButtonClicked: (String, String, String, String) -> Unit,
     onCancelButtonClicked: () -> Unit,
 ){
     var nama by remember { mutableStateOf("") }
@@ -73,8 +73,8 @@ fun HalamanSatu(
 
             Button(
                 onClick = {
-                    if (nama.isNotEmpty() && NIM.isNotEmpty() && konsentrasi.isNotEmpty()) {
-                        onSubmitButtonClicked(nama, NIM, konsentrasi)
+                    if (nama.isNotEmpty() && NIM.isNotEmpty() && konsentrasi.isNotEmpty() && judulskripsi.isNotEmpty()) {
+                        onSubmitButtonClicked(nama, NIM, konsentrasi, judulskripsi)
                     }
                 }
             ) {
